@@ -38,6 +38,9 @@ public class Transcript {
             totalPoints += transcript.get(courseID) * course.units;
             totalUnits += course.units;
         }
-        return (totalUnits == 0) ? 0 : totalPoints / totalUnits;
+        if(totalUnits == 0)
+            return 0 ;
+        else
+            return totalPoints/totalUnits;
     }
 }

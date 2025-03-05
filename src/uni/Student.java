@@ -32,14 +32,7 @@ public class Student {
     }
 
     private void setStudentCode() {
-        int count = 0;
-        for (Student student : studentList) {
-            if (student.majorID == this.majorID && student.entranceYear == this.entranceYear) {
-                count++;
-                break;
-            }
-        }
-        this.studentID = entranceYear + String.valueOf(majorID) + String.format("%02d", count + 1);
+        this.studentID = entranceYear + String.format("%02d",majorID) + String.format("%02d", id);
     }
 
 
